@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class ComponentDidMunt extends Component {
+export default class ComponentDidMount extends Component {
   //DidMount called when page is loading.
 
   // directly define state without using constructor

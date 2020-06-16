@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Constructor from "./PracticeCmp/Constructor";
-import Didmountcmpt from "./PracticeCmp/ComponentDidMunt";
-//import GetDerivedState from "./PracticeCmp/DerivedStateLifeCycle";
-import ShouldComponentUpdate from "./PracticeCmp/ShouldComponentUpdateLifeCycle";
-import Willunmount from "./PracticeCmp/ComponentWillUnmount";
+import DidMount from "./PracticeCmp/component-did-mount-life-cycle";
+//import GetDerivedState from "./PracticeCmp/get-derived-state-life-cycle";
+import ShouldComponentUpdate from "./PracticeCmp/should-component-update-life-cycle";
+import WillUnmount from "./PracticeCmp/component-will-unmount-life-cycle";
 class App extends Component {
   state = {
     counter: 0,
@@ -19,10 +19,10 @@ class App extends Component {
     return (
       <div className="App" style={{ textAlign: "center" }}>
         <Constructor counter={1} />
-        <Didmountcmpt />
+        <DidMount />
         <ShouldComponentUpdate counter={this.state.counter} />
         <button onClick={this.onIncreaseHandler}>Increase</button>
-        <Willunmount />
+        <WillUnmount />
       </div>
     );
   }
