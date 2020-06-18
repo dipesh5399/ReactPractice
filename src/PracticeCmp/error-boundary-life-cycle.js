@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 export default class ErrorBoundary extends React.Component {
   // used constructor component to show Something went wrong.
@@ -7,6 +7,10 @@ export default class ErrorBoundary extends React.Component {
   static getDerivedStateFromError(error) {
     console.log(error);
     return { hasError: true };
+  }
+  // It's used to write code which will be executed when we get an error
+  componentDidCatch(error, info) {
+    console.log(error, info);
   }
 
   render() {

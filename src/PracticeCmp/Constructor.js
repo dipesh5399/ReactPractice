@@ -46,6 +46,7 @@ export default class Constructor extends Component {
         {/* also bind like onClick={this.onIncreaseHandler.bind(this)} */}
         <button onClick={this.onIncreaseHandler}>Increase</button>
         <button onClick={this.onDecreaseHandler}>Decrease</button>
+        <stateExample />
       </div>
     );
   }
