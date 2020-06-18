@@ -14,6 +14,15 @@ export default class Constructor extends Component {
     this.onIncreaseHandler = this.onIncreaseHandler.bind(this);
   }
 
+  // if you cancel the error shown than you able to see the msg written from error boundary and other rendered component.
+  noNegative = () => {
+    if (this.state.counter === 0) {
+      throw new Error("no negative excepted.");
+    }
+  };
+  componentDidMount() {
+    this.noNegative();
+  }
   onIncreaseHandler() {
     this.setState((state) => ({
       // can't set value like counter + 1.
