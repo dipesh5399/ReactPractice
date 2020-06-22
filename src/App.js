@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import Constructor from "./PracticeCmp/Constructor";
+import Constructor from "./PracticeCmp/constructor-life-cycle";
 import DidMount from "./PracticeCmp/component-did-mount-life-cycle";
-//import GetDerivedState from "./PracticeCmp/get-derived-state-life-cycle";
-//import ComponentDidUpdate from "./PracticeCmp/component-did-update-life-cycle";
-//import WillUnmount from "./PracticeCmp/component-will-unmount-life-cycle";
+import GetDerivedState from "./PracticeCmp/get-derived-state-from-props-life-cycle";
+import ComponentDidUpdate from "./PracticeCmp/component-did-update-life-cycle";
+import WillUnmount from "./PracticeCmp/component-will-unmount-life-cycle";
 import SnapshotBeforeUpdate from "./PracticeCmp/get-snapshot-before-update-life-cycle";
 import ErrorBoundary from "./PracticeCmp/error-boundary-life-cycle";
 import WillMount from "./PracticeCmp/component-will-mount-life-cycle";
-import WillReceiveProps from "./PracticeCmp/component-will-receive-props";
-import Demo from "./PracticeCmp/forceUpdate";
+import WillReceiveProps from "./PracticeCmp/component-will-receive-props-life-cycle";
+import Demo from "./PracticeCmp/force-update-life-cycle";
 
 class App extends Component {
   state = {
@@ -35,12 +35,13 @@ class App extends Component {
         </ErrorBoundary>
         <Constructor counter={1} />
         <DidMount />
-        {/* <ComponentDidUpdate counter={this.state.counter} /> */}
         <button onClick={this.onIncreaseHandler}>Increase</button>
-        {/* <WillUnmount /> */}
         <WillMount name="" />
         <WillReceiveProps arr={this.state.countArray} />
         <Demo />
+        <WillUnmount />
+        <ComponentDidUpdate counter={this.state.counter} />
+        <GetDerivedState />
       </div>
     );
   }
