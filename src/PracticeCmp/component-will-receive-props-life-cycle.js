@@ -8,6 +8,6 @@ export default class ComponentWillReceiveProps extends Component {
     console.log(this.props.arr);
   }
   render() {
-    return <div>{this.props.arr}</div>;
+    return <div>[{this.props.arr + ","}]</div>;
   }
 }

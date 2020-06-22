@@ -18,9 +18,7 @@ export default class ComponentWillMount extends Component {
             <Timer />
             <button onClick={this.stopTimerClick}>Close Counter</button>
           </div>
-        ) : (
-          alert("Timer component unmounted")
-        )}
+        ) : null}
       </div>
     );
   }
